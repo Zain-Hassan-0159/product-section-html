@@ -1,0 +1,106 @@
+
+.products{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "articulat-cf", Sans-serif;
+        --e-global-color-primary: #FFC80F;
+        --e-global-color-secondary: #2F2F2F;
+        --e-global-color-text: #000000;
+        --e-global-color-accent: #FFFFFF;
+    }
+
+    .product{
+        flex: 1;
+        min-width: 220px;
+
+        .image{
+            position: relative;
+            box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+            margin-bottom: 15px;
+            min-height: 355px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img{
+                width: 100%;
+                height: auto;
+                object-fit: contain;
+            }
+
+            a{
+                position: absolute;
+                top: 20px;
+                left: 20px;
+                background-color: #FFC80F;
+                text-decoration: none;
+                border-radius: 30px;
+                padding: 10px 25px;
+                font-size: 12px;
+            }
+        }
+
+        .text{
+            margin-bottom: 10px;
+            h2{
+                color: #000000;
+                font-size: 16px;
+                font-weight: 900;
+                text-transform: uppercase;
+                letter-spacing: 1.2px;
+                margin-bottom: 20px;
+            }
+
+            p{
+                color: #000000;
+                font-weight: 300;
+                line-height: 2em;
+            }
+        }
+
+        .call_to_action{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            .cart{
+                background-color: #FFC80F;
+                border-radius: 50%;
+                width: 30px;
+                height: 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            svg{
+                width: 15px;
+                height: 15px;
+            }
+
+            a{
+                font-size: 12px;
+                text-transform: uppercase;
+                letter-spacing: 1.2px;
+                fill: var( --e-global-color-accent );
+                color: var( --e-global-color-accent );
+                background-color: #000000;
+                border-radius: 10px;
+                padding: 10px 20px;
+                text-decoration: none;
+
+                &:hover{
+                    color: var( --e-global-color-text );
+                    background-color: var( --e-global-color-primary );
+                }
+            }
+        }
+
+    }
+}
